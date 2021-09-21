@@ -9,7 +9,7 @@ public class Main {
         myAccounts.deposit(1000);
         var newBalance = myAccounts.addInterest();
         var yourBalance = yourAccount.addInterest();
-        System.out.println("your account has "+ yourBalance + "after adding the interest.");
+        System.out.println("your account with account ID "+ yourAccount.getAccountID() + " has " + yourBalance + "after adding the interest.");
 
 
         var succeeded = myAccounts.withdraw(2000);
