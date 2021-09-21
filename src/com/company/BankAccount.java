@@ -6,6 +6,15 @@ public class BankAccount {
     private double balance;
     private float interestRate;
 
+    public BankAccount(){
+        interestRate = 0.02f;
+    }
+    public BankAccount(double initialBalance, float initialRate){
+        balance=initialBalance;
+        interestRate = initialRate;
+
+    }
+
     public void deposit(double amount){
         balance += amount;
 
