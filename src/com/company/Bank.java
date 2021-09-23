@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.Scanner;
 
 public class Bank {
@@ -24,20 +25,33 @@ public class Bank {
                     addCustomer(menuReader);
                     break;
                 case 3:
-                    Customer current = selectCustomer(menuReader);
+                    Optional<Customer> current = selectCustomer(menuReader);
+                    if(current.isPresent())
+                        doCustomerMenu(menuReader);
+                    else
+                        System.out.println("No customer exists with that ID");
                     break;
                 default:
                     System.out.println("Please choose one of the menu options");
-
-
-
             }
 
         }
 
     }
 
-    private Customer selectCustomer(Scanner reader) {
+    private void doCustomerMenu(Scanner menuReader) {
+        System.out.println("we will finish this");
+    }
+
+    private Optional<Customer> selectCustomer(Scanner reader) {
+        System.out.println("Customer ID of customer to select");
+        var idToFind = reader.nextInt();
+        for (var currentCustomer: allCustomers){
+            if(currentCustomer.getID() == idToFind)
+                return Optional.of(currentCustomer);
+
+        }
+        return Optional.empty();
 
     }
 
