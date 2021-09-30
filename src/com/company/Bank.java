@@ -104,6 +104,7 @@ public class Bank {
         System.out.println("[1] Open an account");
         System.out.println("[2] Close an account");
         System.out.println("[3] Return to main menu");
+        System.out.println("[4] Do the yearly maintenance and show all accounts");
         System.out.println("**************************");
         System.out.println("Enter Choice:");
 
@@ -139,7 +140,6 @@ public class Bank {
         System.out.println("[1] Exit Program");
         System.out.println("[2] add customer");
         System.out.println("[3] Select a customer by ID");
-        System.out.println("[4] Do the yearly maintenance and show all accounts");
         System.out.println("we'll add more soon");
         System.out.println("********************************");
         System.out.println("Enter choice:");
