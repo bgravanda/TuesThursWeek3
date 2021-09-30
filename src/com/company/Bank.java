@@ -141,7 +141,7 @@ public class Bank {
         System.out.println("[2] add customer");
         System.out.println("[3] Select a customer by ID");
         System.out.println("we'll add more soon");
-        System.out.println("********************************");
+        System.out.println("*****************************");
         System.out.println("Enter choice:");
     }
 }
